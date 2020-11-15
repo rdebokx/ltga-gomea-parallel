@@ -3,4 +3,4 @@ This repository contains the parallel implementation of LTGA GOMEA
 
 ## License
 
-LTGA GOMEA Parallel is released under the [MIT](LICENSE) license.
+LTGA GOMEA Parallel is licensed under the [MIT](LICENSE) license.
