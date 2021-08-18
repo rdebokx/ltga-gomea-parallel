@@ -26,5 +26,5 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass.set("com.rdebokx.ltga.App")
+    mainClass.set("com.rdebokx.ltga.App") //TODO: update this
 }
