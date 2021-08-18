@@ -5,7 +5,7 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.Arrays;
 
-import nl.cwi.ltga.sequential.Population;
+import com.rdebokx.ltga.sequential.Population;
 
 import org.junit.Before;
 import org.junit.Test;

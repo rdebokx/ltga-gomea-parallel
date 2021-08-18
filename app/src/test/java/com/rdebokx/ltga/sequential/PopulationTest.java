@@ -7,16 +7,16 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.Arrays;
 
-import nl.cwi.ltga.config.ExecutionConfiguration;
-import nl.cwi.ltga.config.JobConfiguration;
-import nl.cwi.ltga.config.problems.ProblemConfiguration;
-import nl.cwi.ltga.shared.JobState;
+import com.rdebokx.ltga.config.ExecutionConfiguration;
+import com.rdebokx.ltga.config.JobConfiguration;
+import com.rdebokx.ltga.config.problems.ProblemConfiguration;
+import com.rdebokx.ltga.shared.JobState;
 import com.rdebokx.ltga.shared.NotRandom;
-import nl.cwi.ltga.shared.ParameterSet;
-import nl.cwi.ltga.shared.Problem;
-import nl.cwi.ltga.shared.ProblemEvaluator;
-import nl.cwi.ltga.shared.Randomizer;
-import nl.cwi.ltga.shared.Solution;
+import com.rdebokx.ltga.shared.ParameterSet;
+import com.rdebokx.ltga.shared.Problem;
+import com.rdebokx.ltga.shared.ProblemEvaluator;
+import com.rdebokx.ltga.shared.Randomizer;
+import com.rdebokx.ltga.shared.Solution;
 
 import org.junit.Before;
 import org.junit.Test;

@@ -1,9 +1,9 @@
 package com.rdebokx.ltga.sequential;
 
 import static org.junit.Assert.assertEquals;
-import nl.cwi.ltga.shared.JobState;
-import nl.cwi.ltga.shared.ParameterSet;
-import nl.cwi.ltga.shared.Randomizer;
+import com.rdebokx.ltga.shared.JobState;
+import com.rdebokx.ltga.shared.ParameterSet;
+import com.rdebokx.ltga.shared.Randomizer;
 
 import org.junit.Before;
 import org.junit.Test;
