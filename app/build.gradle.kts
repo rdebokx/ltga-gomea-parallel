@@ -26,9 +26,20 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass.set("com.rdebokx.ltga.App") //TODO: update this
-
-    //TODO; add task for sequential execution. Document how to tuse.
-
-    //tODO: add task for parallel execution. Document how to use
+    mainClass.set("com.rdebokx.ltga.App") //TODO: update this: run parallel by default (demo run)
 }
+
+/**
+ * Executables
+ */
+task("RunSequential", JavaExec::class) {
+    main = "com.rdebokx.ltga.sequential.executables.Main"
+    args = listOf("") //TODO:
+    classpath = sourceSets["main"].runtimeClasspath
+}
+
+/**
+ * Experiments
+ */
+
+//TODO
