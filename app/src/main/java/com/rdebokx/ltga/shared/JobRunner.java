@@ -87,18 +87,22 @@ public abstract class JobRunner implements Runnable{
         boolean result = false;
         
         if(CONFIG.EXECUTION_CONFIG.MAX_NUMBER_OF_EVALUATIONS >= 0 && jobState.getNumberOfEvaluations() >= CONFIG.EXECUTION_CONFIG.MAX_NUMBER_OF_EVALUATIONS){
+            System.out.println("Termination condition met: " + jobState.getNumberOfEvaluations() + " evaluations exceeded " + CONFIG.EXECUTION_CONFIG.MAX_NUMBER_OF_EVALUATIONS);
             result = true;
         }
         if(CONFIG.EXECUTION_CONFIG.USE_VALUE_TO_REACH && 
         		(bestSoFar.getConstraintValue() == 0 && bestSoFar.getObjectiveValue() >= CONFIG.EXECUTION_CONFIG.VALUE_TO_REACH
         		|| CONFIG.PROBLEM_CONFIG.PROBLEM == Problem.NK_LANDSCAPES && 
         			Arrays.equals(((InstancesConfiguration) CONFIG.PROBLEM_CONFIG).OPTIMAL_SOLUTION, bestSoFar.getSolution()))){
+            System.out.println("Termination condition met: best value so far (" + bestSoFar.getSolution() + ") matched the optimal solution");
             result = true;
         }
         if(!checkFitnessVarianceLargerThan(CONFIG.EXECUTION_CONFIG.FITNESS_VARIANCE_TOLERANCE)){
+            System.out.println("Termination condition met: fitness variance was larger than " + CONFIG.EXECUTION_CONFIG.FITNESS_VARIANCE_TOLERANCE);
             result = true;
         }
         if(CONFIG.EXECUTION_CONFIG.MAX_NO_IMPROVEMENT_STRETCH > 0 && jobState.getNoImprovementStretch() > CONFIG.EXECUTION_CONFIG.MAX_NO_IMPROVEMENT_STRETCH){
+            System.out.println("Termination condition met: NoImprovementStretch of " + jobState.getNoImprovementStretch() + " exceeded the max_no_improvement_stretch");
             result = true;
         }
         if(CONFIG.EXECUTION_CONFIG.TERMINATION_TIME > 0 && System.currentTimeMillis() > CONFIG.EXECUTION_CONFIG.TERMINATION_TIME){
