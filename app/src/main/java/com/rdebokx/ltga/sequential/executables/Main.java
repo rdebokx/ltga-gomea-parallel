@@ -148,7 +148,7 @@ public class Main {
             result = new JobConfiguration(genConfig, execConfig, problemConfig);
         } else {
             System.out.println("Arguments could not be parsed. Please use the following format:" +
-                    "<problem> <numberOfParameters> <populationSize> <maxEvaluations> <useValueToReach> <valueToReach> <fitnessVarianceTolerance> | maxNoImprovementStretch");
+                    "<problem> <numberOfParameters> <populationSize> <maxEvaluations> <useValueToReach> <valueToReach> <fitnessVarianceTolerance> <maxNoImprovementStretch>");
         }
         return result;
     }
@@ -188,7 +188,7 @@ public class Main {
             result = new JobConfiguration(genConfig, execConfig, problemConfig);
         } else {
             System.out.println("Arguments could not be parsed. Please use the following format:" +
-                    "problem | numberOfParameters | populationSize | maxEvaluations | useValueToReach | valueToReach | fitnessVarianceTolerance | maxNoImprovementStretch | inputFile");
+                    "<problem> <numberOfParameters> <populationSize> <maxEvaluations> <useValueToReach> <valueToReach> <fitnessVarianceTolerance> <maxNoImprovementStretch> <inputFile>");
         }
         return result;
     }
@@ -227,7 +227,7 @@ public class Main {
             result = new JobConfiguration(genConfig, execConfig, problemConfig);
         } else {
             System.out.println("Arguments could not be parsed. Please use the following format: " +
-                    "problem | numberOfParameters | populationSize | maxEvaluations | useValueToReach | valueToReach | fitnessVarianceTolerance | maxNoImprovementStretch | inputBase | inputFile");
+                    "<problem> <numberOfParameters> <populationSize> <maxEvaluations> <useValueToReach> <valueToReach> <fitnessVarianceTolerance> <maxNoImprovementStretch> <inputBase> <inputFile>");
         }
         return result;
     }
