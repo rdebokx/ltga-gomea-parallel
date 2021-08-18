@@ -1,9 +1,9 @@
 package com.rdebokx.ltga.shared;
 
 import static org.junit.Assert.*;
-import nl.cwi.ltga.config.problems.MaxCutConfiguration;
-import nl.cwi.ltga.config.problems.InstancesConfiguration;
-import nl.cwi.ltga.config.problems.ProblemConfiguration;
+import com.rdebokx.ltga.config.problems.MaxCutConfiguration;
+import com.rdebokx.ltga.config.problems.InstancesConfiguration;
+import com.rdebokx.ltga.config.problems.ProblemConfiguration;
 
 import org.junit.Before;
 import org.junit.Test;

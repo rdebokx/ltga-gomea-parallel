@@ -4,10 +4,10 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
 
-import nl.cwi.ltga.parallel.workers.EntropyWorker;
-import nl.cwi.ltga.shared.JobState;
-import nl.cwi.ltga.shared.Pair;
-import nl.cwi.ltga.shared.ParameterSet;
+import com.rdebokx.ltga.parallel.workers.EntropyWorker;
+import com.rdebokx.ltga.shared.JobState;
+import com.rdebokx.ltga.shared.Pair;
+import com.rdebokx.ltga.shared.ParameterSet;
 
 import org.junit.Test;
 

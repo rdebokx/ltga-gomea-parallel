@@ -1,10 +1,10 @@
 package com.rdebokx.ltga.parallel;
 
 import static org.junit.Assert.assertEquals;
-import nl.cwi.ltga.config.ExecutionConfiguration;
-import nl.cwi.ltga.config.JobConfiguration;
-import nl.cwi.ltga.shared.JobState;
-import nl.cwi.ltga.shared.ParameterSet;
+import com.rdebokx.ltga.config.ExecutionConfiguration;
+import com.rdebokx.ltga.config.JobConfiguration;
+import com.rdebokx.ltga.shared.JobState;
+import com.rdebokx.ltga.shared.ParameterSet;
 
 import org.junit.Test;
 

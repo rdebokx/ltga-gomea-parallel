@@ -2,11 +2,11 @@ package com.rdebokx.ltga.sequential;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
-import nl.cwi.ltga.shared.JobState;
-import nl.cwi.ltga.shared.NearestNeighborChain;
-import nl.cwi.ltga.shared.Pair;
-import nl.cwi.ltga.shared.ParameterSet;
-import nl.cwi.ltga.shared.Randomizer;
+import com.rdebokx.ltga.shared.JobState;
+import com.rdebokx.ltga.shared.NearestNeighborChain;
+import com.rdebokx.ltga.shared.Pair;
+import com.rdebokx.ltga.shared.ParameterSet;
+import com.rdebokx.ltga.shared.Randomizer;
 
 import org.junit.Before;
 import org.junit.Test;
