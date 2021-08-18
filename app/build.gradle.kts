@@ -34,7 +34,7 @@ task("RunSequentialOnemax", JavaExec::class) {
 }
 task("RunSequentialDeceptiveTrap", JavaExec::class) {
     main = "com.rdebokx.ltga.sequential.executables.Main"
-    args = listOf("DECEPTIVE_TRAP_4_TIGHT_ENCODING", "64", "50", "100", "true", "25", "0.01", "25")
+    args = listOf("DECEPTIVE_TRAP_5_TIGHT_ENCODING", "25", "5", "5", "true", "1111111111111111111111111", "0.01", "25")
     classpath = sourceSets["main"].runtimeClasspath
 }
 task("RunSequentialNkLandscapes", JavaExec::class) {
