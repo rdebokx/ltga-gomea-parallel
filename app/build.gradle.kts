@@ -34,7 +34,7 @@ application {
  */
 task("RunSequential", JavaExec::class) {
     main = "com.rdebokx.ltga.sequential.executables.Main"
-    args = listOf("") //TODO:
+    args = listOf("ONEMAX", "10", "10", "100", "false", "0", "0.5", "25") //TODO: request this as input
     classpath = sourceSets["main"].runtimeClasspath
 }
 

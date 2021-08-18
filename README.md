@@ -24,6 +24,9 @@ To run LTGA GOMEA directly on your machine, use the following command:
 
 To list all the possible Gradle tasks, run `./gradlew tasks`
 
+#### Configurations
+TODO: define the configurations format of the different problems
+
 ### Using Docker
 
 TODO
