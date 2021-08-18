@@ -1,9 +1,11 @@
 package com.rdebokx.ltga.sequential.executables;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.stream.Stream;
 
 import com.rdebokx.ltga.sequential.Population;
 import com.rdebokx.ltga.sequential.SequentialJobRunner;
@@ -258,7 +260,6 @@ public class Main {
             MaxCutEvaluationFunction weightsFunction = new MaxCutEvaluationFunction(numberOfVertices, weights);
             int bestKnownValue = readBestKnownValue(base, fileName);
             int averageRandomValue = readAverageRandomValue(base, fileName);
-            
             
             config = new MaxCutConfiguration(fileName, bestKnownValue, averageRandomValue, weightsFunction);
             br.close();
