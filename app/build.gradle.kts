@@ -44,7 +44,7 @@ task("RunSequentialNkLandscapes", JavaExec::class) {
 }
 task("RunSequentialMaxcut", JavaExec::class) {
     main = "com.rdebokx.ltga.sequential.executables.Main"
-    args = listOf("MAXCUT", "10", "10", "100", "false", "0", "0.5", "25") //TODO: provide files
+    args = listOf("MAXCUT", "25", "100", "100", "false", "0", "0.5", "25", "", "maxcut25_0") //TODO: provide file.
     classpath = sourceSets["main"].runtimeClasspath
 }
 
