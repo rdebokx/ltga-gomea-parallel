@@ -87,7 +87,7 @@ public class SequentialJobRunner extends JobRunner {
         bestSoFar = population.determineBestSoFar(null);
         
         while (!checkTerminationCondition()) {
-            //System.out.println("Generation " +jobState.getNumberOfGenerations());
+            System.out.println("Generation " +jobState.getNumberOfGenerations());
             //Create offspring. New objective and constraint values are already saved in inputted arrays.
             
             LearningModel linkageModel = fixedFOS == null ? new LinkageTree((Population) population, this.randomizer, CONFIG.EXECUTION_CONFIG) : fixedFOS;

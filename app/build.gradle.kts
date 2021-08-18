@@ -29,22 +29,22 @@ application {
 //TODO: document these and their formats in the readme
 task("RunSequentialOnemax", JavaExec::class) {
     main = "com.rdebokx.ltga.sequential.executables.Main"
-    args = listOf("ONEMAX", "10", "10", "100", "false", "0", "0.5", "25")
+    args = listOf("ONEMAX", "10", "10", "100000", "false", "0", "0.5", "25")
     classpath = sourceSets["main"].runtimeClasspath
 }
 task("RunSequentialDeceptiveTrap", JavaExec::class) {
     main = "com.rdebokx.ltga.sequential.executables.Main"
-    args = listOf("DECEPTIVE_TRAP_5_TIGHT_ENCODING", "25", "5", "5", "true", "1111111111111111111111111", "0.01", "25")
+    args = listOf("DECEPTIVE_TRAP_5_TIGHT_ENCODING", "25", "5", "100000", "true", "1111111111111111111111111", "0.01", "25")
     classpath = sourceSets["main"].runtimeClasspath
 }
 task("RunSequentialNkLandscapes", JavaExec::class) {
     main = "com.rdebokx.ltga.sequential.executables.Main"
-    args = listOf("NK_LANDSCAPES", "10", "10", "100", "false", "0", "0.5", "25") //TODO: provide files
+    args = listOf("NK_LANDSCAPES", "10", "10", "100000", "false", "0", "0.5", "25") //TODO: provide files
     classpath = sourceSets["main"].runtimeClasspath
 }
 task("RunSequentialMaxcut", JavaExec::class) {
     main = "com.rdebokx.ltga.sequential.executables.Main"
-    args = listOf("MAXCUT", "6", "10", "10", "false", "0", "0.5", "25", "src/main/resources/problemdata/maxcut/", "n0000006i00")
+    args = listOf("MAXCUT", "6", "10", "10000", "false", "0", "0.5", "25", "src/main/resources/problemdata/maxcut/", "n0000006i00")
     classpath = sourceSets["main"].runtimeClasspath
 }
 
