@@ -3,6 +3,7 @@ package com.rdebokx.ltga.sequential.executables;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Arrays;
 
 import com.rdebokx.ltga.sequential.Population;
 import com.rdebokx.ltga.sequential.SequentialJobRunner;
@@ -54,7 +55,7 @@ public class Main {
     /**
      * Main entry point for the LTGA. Use either no arguments, if the arguments should be loaded from the database, or provide
      * the following arguments:
-     * - The problem
+     * - The problem: one of the constants defined in com.rdebokx.ltga.shared.Problem
      * - l: the number of parameters
      * - n: the population size
      * - maxEvaluations, use -1 when not applicable
@@ -91,7 +92,13 @@ public class Main {
      */
     public static JobConfiguration loadJobConfiguration(String[] args) {
         JobConfiguration result = null;
-        final Problem problem = Problem.valueOf(args[0]);
+        Problem problem = null;
+        try {
+            problem = Problem.valueOf(args[0]);
+        } catch(Exception e) {
+            System.out.println("The first argument should be one of the following problems: " + Arrays.toString(Problem.values()));
+            e.printStackTrace();
+        }
         final int threads = 1;
         switch(problem){
         case NK_LANDSCAPES:
@@ -141,7 +148,7 @@ public class Main {
             result = new JobConfiguration(genConfig, execConfig, problemConfig);
         } else {
             System.out.println("Arguments could not be parsed. Please use the following format:" +
-                    "problem | numberOfParameters | populationSize | maxEvaluations | useValueToReach | valueToReach | fitnessVarianceTolerance | maxNoImprovementStretch");
+                    "<problem> <numberOfParameters> <populationSize> <maxEvaluations> <useValueToReach> <valueToReach> <fitnessVarianceTolerance> | maxNoImprovementStretch");
         }
         return result;
     }
