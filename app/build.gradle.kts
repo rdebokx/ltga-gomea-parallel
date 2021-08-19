@@ -282,14 +282,14 @@ task("RunOptimalFixedFos", JavaExec::class) {
     main = "com.rdebokx.ltga.experiments.optimalFixedFOS.ROFFDeterminator"
     args = listOf(
             "ONEMAX", // Problem
-            "10", // Number of parameters
-            "16", // Population size
-            "100000", // Max number of evaluations
-            "false", // Use value to reach
-            "0", // Value to reach
-            "0.00001", // Fitness value tolerance
-            "25", // Max no improvement stretch
-            "4" // Threads
+            "5", // Number of parameters
+            "5", // Population size
+//            "100", // Max number of evaluations
+//            "true", // Use value to reach
+//            "4", // Value to reach
+//            "0.00001", // Fitness value tolerance
+//            "5", // Max no improvement stretch
+            "2" // Threads
     )
     classpath = sourceSets["main"].runtimeClasspath
 }

@@ -35,6 +35,7 @@ public class ROFFDeterminator {
 	 */
 	public static void main(String[] args){
 		OptimalFixedFOSConfiguration config = parseConfig(args);
+		System.out.println("Finding Recombinative Optimal Fixed FOS for config: " + config);
 		
 		ArrayList<ParameterSet> combinations = readCombinations(config.EVALUATION_CONFIG.PROBLEM_CONFIG.PROBLEM, config.EVALUATION_CONFIG.GENETIC_CONFIG.NUMBER_OF_PARAMETERS);
 		System.out.println(combinations.size() + " generated Combinations: " + combinations);
@@ -42,9 +43,9 @@ public class ROFFDeterminator {
 		//run meta-LTGA on this set of combinations.
 		OptimalFixedFOSConfiguration OFFConfig = new OptimalFixedFOSConfiguration(combinations, config.EVALUATION_CONFIG, config.SEEDS);
 		ExecutionConfiguration execConfig = new ExecutionConfiguration(threads, -1, -1, false, -1, ExecutionConfiguration.DEFAULT_FITNESS_VARIANCE_TOLERANCE);
-        GeneticConfiguration geneticConfig = new GeneticConfiguration(popSize, popSize, popSize, combinations.size());
-        JobConfiguration jobConfig = new JobConfiguration(geneticConfig, execConfig, OFFConfig);
-        dynamicROFFFinding(jobConfig);
+		GeneticConfiguration geneticConfig = new GeneticConfiguration(popSize, popSize, popSize, combinations.size());
+		JobConfiguration jobConfig = new JobConfiguration(geneticConfig, execConfig, OFFConfig);
+		dynamicROFFFinding(jobConfig);
 	}
 	
 	/**
@@ -81,14 +82,13 @@ public class ROFFDeterminator {
 	 * @param jobConfig The jobConfiguration for which the Optimal Fixed FOS has to be found.
 	 */
 	private static void dynamicROFFFinding(JobConfiguration jobConfig){
-        while(true){
-        	System.out.println("Starting with n=" + jobConfig.GENETIC_CONFIG.POPULATION_SIZE + " at " + new Date());
-        	ParallelJobRunner runner = new ParallelJobRunner(jobConfig, true);
-            runner.run();
-    		OFFDeterminator.parseFoundResults(runner.getBestFound(), (OptimalFixedFOSConfiguration) jobConfig.PROBLEM_CONFIG);
-        	jobConfig = jobConfig.copyForPopSize(jobConfig.GENETIC_CONFIG.POPULATION_SIZE * 2);
-        }
-		
+		while(true){
+			System.out.println("Starting with n=" + jobConfig.GENETIC_CONFIG.POPULATION_SIZE + " at " + new Date());
+			ParallelJobRunner runner = new ParallelJobRunner(jobConfig, true);
+			runner.run();
+			OFFDeterminator.parseFoundResults(runner.getBestFound(), (OptimalFixedFOSConfiguration) jobConfig.PROBLEM_CONFIG);
+			jobConfig = jobConfig.copyForPopSize(jobConfig.GENETIC_CONFIG.POPULATION_SIZE * 2);
+		}
 	}
 	
 	/**
@@ -97,13 +97,12 @@ public class ROFFDeterminator {
 	 * @return The parsed configuration.
 	 */
 	public static OptimalFixedFOSConfiguration parseConfig(String[] args){
-		//Format: Problem | params | valueToReach | popSize | threads 
         OptimalFixedFOSConfiguration result = null;
         try{
         	Problem problem = Problem.valueOf(args[0]);
         	int params = Integer.parseInt(args[1]);
         	popSize = Integer.parseInt(args[args.length - 2]);
-            threads = Integer.parseInt(args[args.length - 1]);
+					threads = Integer.parseInt(args[args.length - 1]);
             
             switch(problem){
             case MAXCUT:
@@ -121,7 +120,7 @@ public class ROFFDeterminator {
             e.printStackTrace();
             System.out.println("Please provide problem | params | valueToReach | popSize | threads or problem | params | inputBasis | inputFile | popSize | threads");
         }
-        System.out.println("Make OFFConfig");
+        System.out.println("Extend OFFConfig " + result);
         return makeOFFConfig(result);
     }
 	
@@ -134,7 +133,7 @@ public class ROFFDeterminator {
     public static OptimalFixedFOSConfiguration makeOFFConfig(OptimalFixedFOSConfiguration config){
         LearningModel LTGA = null;
         int LTGAScore = (int) Math.ceil(-1 * ProblemEvaluator.OptimalFixedFOSFunctionProblemEvaluation(config, LTGA));
-        //System.out.println("LTGAScore: " + LTGAScore);
+        System.out.println("LTGAScore: " + LTGAScore);
         ExecutionConfiguration newExecConfig = new ExecutionConfiguration(
                 config.EVALUATION_CONFIG.EXECUTION_CONFIG.THREADS,
                 config.EVALUATION_CONFIG.EXECUTION_CONFIG.MAX_NO_IMPROVEMENT_STRETCH,

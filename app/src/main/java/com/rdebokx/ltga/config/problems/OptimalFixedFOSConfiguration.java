@@ -10,7 +10,7 @@ public class OptimalFixedFOSConfiguration extends ProblemConfiguration {
 
     public final List<ParameterSet> LINKAGE_SETS;
     public final JobConfiguration EVALUATION_CONFIG;
-    public static final int RUNS = 1000;
+    public static final int RUNS = 10;
     public final long[][] SEEDS;
     
     /**
