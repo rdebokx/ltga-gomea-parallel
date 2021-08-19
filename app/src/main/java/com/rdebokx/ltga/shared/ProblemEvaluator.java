@@ -198,6 +198,7 @@ public class ProblemEvaluator {
             } else {
                 dynamicRunner = new DynamicJobRunner(problemConfig.EVALUATION_CONFIG, false, learningModel);
             }
+            System.out.println("Evaluating LTGA performance with fixed FOS, run " + i + " of " + OptimalFixedFOSConfiguration.RUNS);
             dynamicRunner.run();
             
             double distanceToOptimum = problemConfig.EVALUATION_CONFIG.EXECUTION_CONFIG.VALUE_TO_REACH - dynamicRunner.getBestFound().getObjectiveValue();
