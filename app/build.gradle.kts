@@ -189,14 +189,6 @@ task("RunPPMaxcut", JavaExec::class) {
     classpath = sourceSets["main"].runtimeClasspath
 }
 
-//TODO; include this one:
-task("RunPPOptimalFixedFos", JavaExec::class) {
-    main = "com.rdebokx.ltga.parallel.executables.Main"
-    args = listOf("OPTIMAL_FIXED_FOS", "10", "10", "100", "false", "0", "0.5", "25")
-    classpath = sourceSets["main"].runtimeClasspath
-}
-
-
 /********************************
  * Embarrassingly Parallel Executables *
  ********************************/
@@ -277,6 +269,26 @@ task("RunEPMaxcut", JavaExec::class) {
             "25", // Max no improvement stretch
             "src/main/resources/problemdata/maxcut/", // Base directory with problem definition. Should contain the provided file and matching .bkv (Best Known Value) and .arv (Average Random Value) files in the BKV and ARV folder respectively.
             "n0000006i00", // File name of the file containing the problem definition, without .txt extension.
+            "4" // Threads
+    )
+    classpath = sourceSets["main"].runtimeClasspath
+}
+
+/************************************************************
+ * Meta-LTGA: Determine the Recombinative Optimal Fixed FOS *
+ ************************************************************/
+//TODO: document this one in the Readme in particular
+task("RunOptimalFixedFos", JavaExec::class) {
+    main = "com.rdebokx.ltga.experiments.optimalFixedFOS.ROFFDeterminator"
+    args = listOf(
+            "ONEMAX", // Problem
+            "10", // Number of parameters
+            "16", // Population size
+            "100000", // Max number of evaluations
+            "false", // Use value to reach
+            "0", // Value to reach
+            "0.00001", // Fitness value tolerance
+            "25", // Max no improvement stretch
             "4" // Threads
     )
     classpath = sourceSets["main"].runtimeClasspath
