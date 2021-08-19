@@ -26,7 +26,7 @@ import com.rdebokx.ltga.shared.Solution;
 
 public class OFFDeterminator {
     
-    public static final String SEEDS_FILE = "../data/seeds.txt";
+    public static final String SEEDS_FILE = "src/main/resources/problemdata/seeds.txt";
 	
     /**
      * This is the main entry point of the OFFDeterminator. This executable is aimed at determining the Optimal Fixed FOS for a given 
