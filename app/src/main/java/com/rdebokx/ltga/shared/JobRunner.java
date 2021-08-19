@@ -98,7 +98,7 @@ public abstract class JobRunner implements Runnable{
             result = true;
         }
         if(!checkFitnessVarianceLargerThan(CONFIG.EXECUTION_CONFIG.FITNESS_VARIANCE_TOLERANCE)){
-            System.out.println("Termination condition met: fitness variance was larger than " + CONFIG.EXECUTION_CONFIG.FITNESS_VARIANCE_TOLERANCE);
+            System.out.println("Termination condition met: fitness variance was smaller or equal to " + CONFIG.EXECUTION_CONFIG.FITNESS_VARIANCE_TOLERANCE);
             result = true;
         }
         if(CONFIG.EXECUTION_CONFIG.MAX_NO_IMPROVEMENT_STRETCH > 0 && jobState.getNoImprovementStretch() > CONFIG.EXECUTION_CONFIG.MAX_NO_IMPROVEMENT_STRETCH){
