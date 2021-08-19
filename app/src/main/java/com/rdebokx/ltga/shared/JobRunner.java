@@ -68,7 +68,7 @@ public abstract class JobRunner implements Runnable{
             variance += (population.getObjectiveValue(i) - avgObjectiveValue) * (population.getObjectiveValue(i) - avgObjectiveValue);
         }
         variance /= (CONFIG.GENETIC_CONFIG.POPULATION_SIZE * 1.0);
-        
+
         return variance > threshold;
     }
     

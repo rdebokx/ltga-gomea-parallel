@@ -39,7 +39,7 @@ task("RunSequentialDeceptiveTrap", JavaExec::class) {
 }
 task("RunSequentialNkLandscapes", JavaExec::class) {
     main = "com.rdebokx.ltga.sequential.executables.Main"
-    args = listOf("NK_LANDSCAPES", "10", "10", "100000", "false", "0", "0.5", "25") //TODO: provide files
+    args = listOf("NK_LANDSCAPES", "10", "10", "100000", "false", "0", "0.25", "25", "src/main/resources/problemdata/nklandscapes/N10K5S1M6_0.txt")
     classpath = sourceSets["main"].runtimeClasspath
 }
 task("RunSequentialMaxcut", JavaExec::class) {
