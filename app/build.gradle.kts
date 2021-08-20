@@ -33,7 +33,7 @@ application {
  * Solve a randomly generated Onemax problem using the LTGA in sequential mode.
  */
 task("RunSeqOnemax", JavaExec::class) {
-    main = "com.rdebokx.ltga.sequential.executables.Main"
+    mainClass.set("com.rdebokx.ltga.sequential.executables.Main")
     args = listOf(
             "ONEMAX", // Problem
             "10", // Number of parameters
@@ -51,7 +51,7 @@ task("RunSeqOnemax", JavaExec::class) {
  * Solve a randomly generated Deceptive Trap with blocks size 5 using tight encoding, using the LTGA in sequential mode.
  */
 task("RunSeqDeceptiveTrap", JavaExec::class) {
-    main = "com.rdebokx.ltga.sequential.executables.Main"
+    mainClass.set("com.rdebokx.ltga.sequential.executables.Main")
     args = listOf(
             "DECEPTIVE_TRAP_5_TIGHT_ENCODING", // Problem
             "25", // Number of parameters
@@ -69,7 +69,7 @@ task("RunSeqDeceptiveTrap", JavaExec::class) {
  * Solve a provided NK Landscapes problem, using the LTGA in sequential mode.
  */
 task("RunSeqNkLandscapes", JavaExec::class) {
-    main = "com.rdebokx.ltga.sequential.executables.Main"
+    mainClass.set("com.rdebokx.ltga.sequential.executables.Main")
     args = listOf(
             "NK_LANDSCAPES", // Problem
             "10", // Number of parameters. Should equal the number of parameters in the provided file.
@@ -88,7 +88,7 @@ task("RunSeqNkLandscapes", JavaExec::class) {
  * Solve a provided Maxcut problem, using the LTGA in sequential mode.
  */
 task("RunSeqMaxcut", JavaExec::class) {
-    main = "com.rdebokx.ltga.sequential.executables.Main"
+    mainClass.set("com.rdebokx.ltga.sequential.executables.Main")
     args = listOf(
             "MAXCUT", // Problem
             "6", // Number of parameters. Should equal the number of parameters in the provided file.
@@ -114,7 +114,7 @@ task("RunSeqMaxcut", JavaExec::class) {
 //TODO: point to these tasks in the Readme
 //TODO: document terminology in the Readme
 task("RunPPOnemax", JavaExec::class) {
-    main = "com.rdebokx.ltga.parallel.executables.Main"
+    mainClass.set("com.rdebokx.ltga.parallel.executables.Main")
     args = listOf(
             "ONEMAX", // Problem
             "10", // Number of parameters
@@ -133,7 +133,7 @@ task("RunPPOnemax", JavaExec::class) {
  * Solve a randomly generated Deceptive Trap with blocks size 5 using tight encoding, using the LTGA in perfect parallel mode.
  */
 task("RunPPDeceptiveTrap", JavaExec::class) {
-    main = "com.rdebokx.ltga.parallel.executables.Main"
+    mainClass.set("com.rdebokx.ltga.parallel.executables.Main")
     args = listOf(
             "DECEPTIVE_TRAP_5_TIGHT_ENCODING", // Problem
             "25", // Number of parameters
@@ -152,7 +152,7 @@ task("RunPPDeceptiveTrap", JavaExec::class) {
  * Solve a provided NK Landscapes problem, using the LTGA in perfect parallel mode.
  */
 task("RunPPNkLandscapes", JavaExec::class) {
-    main = "com.rdebokx.ltga.parallel.executables.Main"
+    mainClass.set("com.rdebokx.ltga.parallel.executables.Main")
     args = listOf(
             "NK_LANDSCAPES", // Problem
             "10", // Number of parameters. Should equal the number of parameters in the provided file.
@@ -172,7 +172,7 @@ task("RunPPNkLandscapes", JavaExec::class) {
  * Solve a provided Maxcut problem, using the LTGA in perfect parallel mode.
  */
 task("RunPPMaxcut", JavaExec::class) {
-    main = "com.rdebokx.ltga.parallel.executables.Main"
+    mainClass.set("com.rdebokx.ltga.parallel.executables.Main")
     args = listOf(
             "MAXCUT", // Problem
             "6", // Number of parameters. Should equal the number of parameters in the provided file.
@@ -199,7 +199,7 @@ task("RunPPMaxcut", JavaExec::class) {
 //TODO: point to these tasks in the Readme
 //TODO: document terminology in the Readme
 task("RunEPOnemax", JavaExec::class) {
-    main = "com.rdebokx.ltga.parallel.executables.EmbarrassinglyParallel"
+    mainClass.set("com.rdebokx.ltga.parallel.executables.EmbarrassinglyParallel")
     args = listOf(
             "ONEMAX", // Problem
             "10", // Number of parameters
@@ -218,7 +218,7 @@ task("RunEPOnemax", JavaExec::class) {
  * Solve a randomly generated Deceptive Trap with blocks size 5 using tight encoding, using the LTGA in embarrassingly parallel mode.
  */
 task("RunEPDeceptiveTrap", JavaExec::class) {
-    main = "com.rdebokx.ltga.parallel.executables.EmbarrassinglyParallel"
+    mainClass.set("com.rdebokx.ltga.parallel.executables.EmbarrassinglyParallel")
     args = listOf(
             "DECEPTIVE_TRAP_5_TIGHT_ENCODING", // Problem
             "25", // Number of parameters
@@ -237,7 +237,7 @@ task("RunEPDeceptiveTrap", JavaExec::class) {
  * Solve a provided NK Landscapes problem, using the LTGA in embarrassingly parallel mode.
  */
 task("RunEPNkLandscapes", JavaExec::class) {
-    main = "com.rdebokx.ltga.parallel.executables.EmbarrassinglyParallel"
+    mainClass.set("com.rdebokx.ltga.parallel.executables.EmbarrassinglyParallel")
     args = listOf(
             "NK_LANDSCAPES", // Problem
             "10", // Number of parameters. Should equal the number of parameters in the provided file.
@@ -257,7 +257,7 @@ task("RunEPNkLandscapes", JavaExec::class) {
  * Solve a provided Maxcut problem, using the LTGA in embarrassingly parallel mode.
  */
 task("RunEPMaxcut", JavaExec::class) {
-    main = "com.rdebokx.ltga.parallel.executables.EmbarrassinglyParallel"
+    mainClass.set("com.rdebokx.ltga.parallel.executables.EmbarrassinglyParallel")
     args = listOf(
             "MAXCUT", // Problem
             "6", // Number of parameters. Should equal the number of parameters in the provided file.
@@ -279,7 +279,7 @@ task("RunEPMaxcut", JavaExec::class) {
  ************************************************************/
 //TODO: document this one in the Readme in particular
 task("RunOptimalFixedFos", JavaExec::class) {
-    main = "com.rdebokx.ltga.experiments.optimalFixedFOS.ROFFDeterminator"
+    mainClass.set("com.rdebokx.ltga.experiments.optimalFixedFOS.ROFFDeterminator")
     args = listOf(
             "ONEMAX", // Problem
             "5", // Number of parameters
