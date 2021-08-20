@@ -77,7 +77,6 @@ public class DynamicJobRunner extends JobRunner {
             }
         
             this.jobState.incrementNumberOfEvaluations(runner.getJobState().getNumberOfEvaluations());
-            System.out.println("Check termination conditions for DynamicJobRunner. Current # of evaluations: " + this.jobState.getNumberOfEvaluations() + ", max number of evaluations: " + CONFIG.EXECUTION_CONFIG.MAX_NUMBER_OF_EVALUATIONS);
             stopRunner = this.checkTerminationCondition() || runner.getBestFound() == null;
             currentConfig = currentConfig.copyForPopSize(currentConfig.GENETIC_CONFIG.POPULATION_SIZE * 2);
         }

@@ -29,7 +29,7 @@ TODO: define the configurations format of the different problems
 
 ### Using Docker
 
-TODO
+Running the LTGA GOMEA Parallel in Docker is not supported yet.
 
 ## Development
 
