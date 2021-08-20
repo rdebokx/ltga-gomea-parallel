@@ -283,12 +283,6 @@ task("RunOptimalFixedFos", JavaExec::class) {
     args = listOf(
             "ONEMAX", // Problem
             "5", // Number of parameters
-            "5", // Population size
-//            "100", // Max number of evaluations
-//            "true", // Use value to reach
-//            "4", // Value to reach
-//            "0.00001", // Fitness value tolerance
-//            "5", // Max no improvement stretch
             "2" // Threads
     )
     classpath = sourceSets["main"].runtimeClasspath

@@ -113,7 +113,8 @@ public class Profiler {
             for(int i = 0; i < spacesNeeded; i++){
                 record += " ";
             }
-            BigDecimal percentualTime = new BigDecimal(executionTime / ((programEnd - programStart) * .01));
+            long duration = Math.max(programEnd - programStart, 1);
+            BigDecimal percentualTime = new BigDecimal(executionTime / (duration * .01));
             percentualTime = percentualTime.setScale(2, BigDecimal.ROUND_HALF_UP);
             record += percentualTime;
             System.out.println(record);
