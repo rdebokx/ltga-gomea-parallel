@@ -1,25 +1,19 @@
 package com.rdebokx.ltga.sequential.executables;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.Arrays;
-import java.util.stream.Stream;
-
-import com.rdebokx.ltga.sequential.Population;
-import com.rdebokx.ltga.sequential.SequentialJobRunner;
 import com.rdebokx.ltga.config.ExecutionConfiguration;
 import com.rdebokx.ltga.config.GeneticConfiguration;
 import com.rdebokx.ltga.config.JobConfiguration;
-import com.rdebokx.ltga.config.problems.MaxCutConfiguration;
 import com.rdebokx.ltga.config.problems.InstancesConfiguration;
+import com.rdebokx.ltga.config.problems.MaxCutConfiguration;
 import com.rdebokx.ltga.config.problems.ProblemConfiguration;
-import com.rdebokx.ltga.shared.MaxCutEvaluationFunction;
-import com.rdebokx.ltga.shared.UniformEvaluationFunction;
-import com.rdebokx.ltga.shared.Problem;
-import com.rdebokx.ltga.shared.ProblemEvaluationException;
-import com.rdebokx.ltga.shared.Solution;
+import com.rdebokx.ltga.sequential.Population;
+import com.rdebokx.ltga.sequential.SequentialJobRunner;
+import com.rdebokx.ltga.shared.*;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Arrays;
 
 /**
  * /**
