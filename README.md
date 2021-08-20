@@ -1,15 +1,17 @@
 # ltga-gomea-parallel
-This repository contains the parallel implementation of LTGA GOMEA
+This repository contains the parallel Java implementation of [LTGA GOMEA](https://homepages.cwi.nl/~bosman/source_code.php), a Genetic Algorithm, which is part of the Evolutionary Algorithm subset of Artificial Intelligence algorithms.
 
-## Work in Progress
+More than 5 years after my graduation I decided to publish the source code of [my thesis](https://repository.tudelft.nl/islandora/object/uuid%3A6cf6c908-0f5d-4096-b3ad-aa96fd1ff382), which is also presented at [GECCO '15](), through this repository. 
+This was mostly done in the hope to help any Evolutionary Algorithm enthousiasts in any way.
 
-I decided to publish this algorithm that I developed during my MSc. Thesis at Delft University of Technology.
+#### DISCLAIMER 
 
-Right now, this repository only contains an initial dump of the code that I found in my archives. 
+This code is provided **as is**. Please also see the [licence](#license) below. The code quality is poor and does not represent the style I develop software nowadays.
 
-Please bear with me as I cleanup and polish the code and documentation to make it easier to understand and use.
+This code was written during my Master Thesis with the main objective to be readable and to quickly be able to run a large number of experiments.
+Code maintainability was not a requirement and as a result, this code has not been maintained for several years. When publishing this code I've done the bare minimum to get it running again. 
 
-TODO: disclaimer, also point to publications
+Again, this is simply published in the hope to help any EA enthousiasts and to give an insight of the AI that I developed in the past.
 
 ## Running the application
 
@@ -72,7 +74,8 @@ Running the LTGA GOMEA Parallel in Docker is not supported yet.
 
 ## Resources
 
-TODO: point to publications.
+* [My Master's Thesis at Delft University of Technology](https://repository.tudelft.nl/islandora/object/uuid%3A6cf6c908-0f5d-4096-b3ad-aa96fd1ff382)
+* [GECCO '15 Publication](http://dl.acm.org/citation.cfm?id=2739482.2764679)
 
 ## License
 
