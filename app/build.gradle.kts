@@ -18,16 +18,9 @@ dependencies {
     implementation("com.google.guava:guava:30.1.1-jre")
 }
 
-application {
-    // Define the main class for the application.
-    mainClass.set("com.rdebokx.ltga.App") //TODO: update this: run parallel by default (demo run)
-}
-
 /**************************
  * Sequential Executables *
  **************************/
-//TODO: point to these tasks in the readme
-//TODO: document terminology in readme
 
 /**
  * Solve a randomly generated Onemax problem using the LTGA in sequential mode.
@@ -111,8 +104,6 @@ task("RunSeqMaxcut", JavaExec::class) {
 /**
  * Solve a randomly generated Onemax problem using the LTGA in perfect parallel mode.
  */
-//TODO: point to these tasks in the Readme
-//TODO: document terminology in the Readme
 task("RunPPOnemax", JavaExec::class) {
     mainClass.set("com.rdebokx.ltga.parallel.executables.Main")
     args = listOf(
@@ -137,11 +128,11 @@ task("RunPPDeceptiveTrap", JavaExec::class) {
     args = listOf(
             "DECEPTIVE_TRAP_5_TIGHT_ENCODING", // Problem
             "25", // Number of parameters
-            "5", // Population size
+            "40", // Population size
             "100000", // Max number of evaluations
-            "false", // Use value to reach
-            "0", // Value to reach
-            "0.01", // Fitness tolerance
+            "true", // Use value to reach
+            "5", // Value to reach
+            "0.0001", // Fitness tolerance
             "25", // Max no improvement stretch
             "4" // Threads
     )
@@ -196,8 +187,6 @@ task("RunPPMaxcut", JavaExec::class) {
 /**
  * Solve a randomly generated Onemax problem using the LTGA in embarrassingly parallel mode.
  */
-//TODO: point to these tasks in the Readme
-//TODO: document terminology in the Readme
 task("RunEPOnemax", JavaExec::class) {
     mainClass.set("com.rdebokx.ltga.parallel.executables.EmbarrassinglyParallel")
     args = listOf(
