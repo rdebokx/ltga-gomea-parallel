@@ -1,0 +1,6 @@
+- 1e lijn = probleemlengte, bloklengte, stapgrootte bloktranslatie, aantal bloks.
+- 2e lijn = optimale oplossing
+- 3e lijn = optimale fitness
+- 4e lijn = indices eerste blok
+- 5e lijn = bitvalues 11111 en bijhorende fitness
+- ....
