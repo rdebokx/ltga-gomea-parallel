@@ -1,15 +1,15 @@
 # LTGA GOMEA Parallel
 This repository contains the parallel Java implementation of [LTGA GOMEA](https://homepages.cwi.nl/~bosman/source_code.php), a Genetic Algorithm, which is part of the Evolutionary Algorithm subset of Artificial Intelligence algorithms.
 
-More than 5 years after my graduation I decided to publish the source code of [my thesis](https://repository.tudelft.nl/islandora/object/uuid%3A6cf6c908-0f5d-4096-b3ad-aa96fd1ff382), of which the results were also presented at [GECCO '15](). 
+More than 5 years after my graduation I decided to publish the source code of [my Master's thesis](https://repository.tudelft.nl/islandora/object/uuid%3A6cf6c908-0f5d-4096-b3ad-aa96fd1ff382) Computer Science at Delft University of Technology, of which the results were also presented at [GECCO '15](). 
 This was mostly done in the hope to help any Evolutionary Algorithm enthousiasts in any way.
 
 #### \*\*DISCLAIMER\*\* 
 
 This code is provided **as is**. Please also see the [licence](#license) below. The code quality is poor and does not represent my current style of software development.
 
-This code was written during my Master Thesis with the main objective to be readable and to quickly be able to run a large number of experiments.
-Code maintainability was not a requirement and as a result, this code has not been maintained for several years. While publishing this code I've done the bare minimum to get it running again. 
+This code was written during my Master's Thesis with the main objective to be readable and to quickly be able to run a large number of experiments.
+Code maintainability was not a requirement and as a result, this code has not been maintained since. While publishing this code I've done the bare minimum to get it running again. 
 
 Again, this is simply published in the hope to help any EA enthousiasts and to give an insight of the AI that I developed in the past.
 
