@@ -66,7 +66,13 @@ In the task definitions in [`build.gradle.kts`](app/build.gradle.kts), the follo
 
 ### Using Docker
 
-Running the LTGA GOMEA Parallel in Docker is not supported yet.
+_This requires [Docker](https://www.docker.com/get-started) to be installed on your machine_
+
+You can run the LTGA in Docker using the same Gradle tasks like this:
+
+```shell
+docker run -it ltga-gomea-parallel:latest ./gradlew <task>
+```
 
 ## Training Data
 
