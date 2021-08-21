@@ -70,7 +70,7 @@ Running the LTGA GOMEA Parallel in Docker is not supported yet.
 
 ## Training Data
 
-This repository contains a set of pre-generated combinatorial problem definitions for the problems `ONEMAX`, `NK_LANDSCAPES` and `MAXCUT`.
+This repository contains a set of pre-generated combinatorial problem definitions for the problems `NK_LANDSCAPES` and `MAXCUT`.
 In total, this consists of more than 200MB of problem definition data, which is situated in the resources' [`problemdata` folder](app/src/main/resources/problemdata).
 
 ## Development
