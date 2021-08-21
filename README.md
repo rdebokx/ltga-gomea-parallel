@@ -68,6 +68,11 @@ In the task definitions in [`build.gradle.kts`](app/build.gradle.kts), the follo
 
 Running the LTGA GOMEA Parallel in Docker is not supported yet.
 
+## Training Data
+
+This repository contains a set of pre-generated combinatorial problem definitions for the problems `ONEMAX`, `NK_LANDSCAPES` and `MAXCUT`.
+In total, this consists of more than 200MB of problem definition data, which is situated in the resources' [`problemdata` folder](app/src/main/resources/problemdata).
+
 ## Development
 
 * To run all unit tests, use `./gradlew test`
