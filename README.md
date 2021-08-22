@@ -91,7 +91,7 @@ In total, this consists of more than 200MB of problem definition data, which is 
 
 ## Development
 
-* To run all unit tests, use `./gradlew test`
+To run all unit tests, use `./gradlew test`
 
 ## Resources
 
