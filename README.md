@@ -68,10 +68,20 @@ In the task definitions in [`build.gradle.kts`](app/build.gradle.kts), the follo
 
 _This requires [Docker](https://www.docker.com/get-started) to be installed on your machine_
 
-You can run the LTGA in Docker using the same Gradle tasks like this:
+A prebuilt Docker image is available on [DockerHub](https://hub.docker.com/r/roydb/ltga-gomea-parallel). You can pull and use this image directly to execute the Gradle tasks listed above.  
+Simply run the following command:
 
 ```shell
-docker run -it ltga-gomea-parallel:latest ./gradlew <task>
+docker pull roydb/ltga-gomea-parallel
+docker run -it roydb/ltga-gomea-parallel:latest ./gradlew <task>
+```
+
+#### Building the container.
+
+To run the LTGA code with alternative parameters or a change in the code, make sure you build the Docker container before using the command above:
+
+```shell
+docker build -t roydb/ltga-gomea-parallel:latest .
 ```
 
 ## Training Data
