@@ -103,7 +103,7 @@ public class SequentialJobRunner extends JobRunner {
         //Print results
         if(printResults){
             System.out.println("Jobrunner finished. " + jobState.getNumberOfGenerations() + " generations needed." );
-            Profiler.printResults();
+            //Profiler.printResults();
             System.out.println("Best found solution: ");
             System.out.println(bestSoFar);
         }
