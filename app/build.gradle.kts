@@ -166,15 +166,15 @@ task("RunPPMaxcut", JavaExec::class) {
     mainClass.set("com.rdebokx.ltga.parallel.executables.Main")
     args = listOf(
             "MAXCUT", // Problem
-            "6", // Number of parameters. Should equal the number of parameters in the provided file.
-            "10", // Population size
-            "10000", // Max number of evaluations
-            "false",  // Use value to reach
-            "0", // Value to reach
+            "100", // Number of parameters. Should equal the number of parameters in the provided file.
+            "250", // Population size
+            "1000000", // Max number of evaluations
+            "true",  // Use value to reach
+            "7975", // Value to reach
             "0.5", // Fitness tolerance
             "25", // Max no improvement stretch
             "src/main/resources/problemdata/maxcut/", // Base directory with problem definition. Should contain the provided file and matching .bkv (Best Known Value) and .arv (Average Random Value) files in the BKV and ARV folder respectively.
-            "n0000006i00", // File name of the file containing the problem definition, without .txt extension.
+            "n0000100i00", // File name of the file containing the problem definition, without .txt extension.
             "4" // Threads
     )
     classpath = sourceSets["main"].runtimeClasspath

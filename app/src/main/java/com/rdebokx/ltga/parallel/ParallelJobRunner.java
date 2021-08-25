@@ -93,7 +93,7 @@ public class ParallelJobRunner extends JobRunner {
         if(printResults){
             Profiler.setProgramEnd();
             System.out.println("Jobrunner finished. " + jobState.getNumberOfGenerations() + " generations needed." );
-            Profiler.printResults();
+            //Profiler.printResults();
             System.out.println("Best found solution: ");
             System.out.println(bestSoFar);
         }

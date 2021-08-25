@@ -94,7 +94,7 @@ public abstract class JobRunner implements Runnable{
         		(bestSoFar.getConstraintValue() == 0 && bestSoFar.getObjectiveValue() >= CONFIG.EXECUTION_CONFIG.VALUE_TO_REACH
         		|| CONFIG.PROBLEM_CONFIG.PROBLEM == Problem.NK_LANDSCAPES && 
         			Arrays.equals(((InstancesConfiguration) CONFIG.PROBLEM_CONFIG).OPTIMAL_SOLUTION, bestSoFar.getSolution()))){
-            System.out.println("Termination condition met: best value so far (" + bestSoFar.getSolution() + ") matched the optimal solution");
+            System.out.println("Termination condition met: best value so far with fitness " + bestSoFar.getObjectiveValue() + " matched the valueToReach");
             result = true;
         }
         if(!checkFitnessVarianceLargerThan(CONFIG.EXECUTION_CONFIG.FITNESS_VARIANCE_TOLERANCE)){
