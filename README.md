@@ -78,9 +78,9 @@ docker build -t roydb/ltga-gomea-parallel:latest .
 ### An example
 
 One of the combinatorial problems that this LTGA implementation is able to solve, is the [MAXCUT](https://en.wikipedia.org/wiki/Maximum_cut) problem.  
-The repository contains a set of pre-generated problem instances in the [problemdata/maxcut](app/src/main/resources/problemdata/maxcut) folder. For each of these problems, a Best Known Value (BKV) and Average Random Value (ARV) is stored in the `BKV` and `ARV` folder respecitvely.
+This repository contains a set of pre-generated problem instances in the [problemdata/maxcut](app/src/main/resources/problemdata/maxcut) folder. For each of these problems, a Best Known Value (BKV) and Average Random Value (ARV) is stored in the `BKV` and `ARV` folder respecitvely.
 
-You can let LTGA solve a simple MAXCUT problem in parallel by running the following command:
+You can let LTGA solve a MAXCUT problem in parallel by running the following command:
 
 ```shell
 ./gradlew RunPPMaxcut
